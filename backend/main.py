@@ -15,7 +15,11 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 app = FastAPI(title="WattWise AI API", version="1.0.0")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+allow_origins=[
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "https://wattwise-ai-h7us.onrender.com"
+],
     allow_credentials=True, allow_methods=["*"], allow_headers=["*"]
 )
 
